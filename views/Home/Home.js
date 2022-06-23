@@ -1,87 +1,71 @@
-import {Heading, Text, Link } from '@chakra-ui/react'
-import Image from 'next/image'
+import {Heading, Text, Link, Avatar, Button, VStack } from '@chakra-ui/react'
 import styles from '../../styles/Home.module.scss'
 import { motion } from 'framer-motion'
 import { animationVariants } from '../../constants/Animations/simpleVariants';
-
+import {FaGithub, FaPencilAlt, FaTwitter, FaUser} from 'react-icons/fa'
 const MotionHeading = motion(Heading);
 const MotionLink = motion(Link);
+
+const links = [
+  {
+    linkName: 'Twitter',
+    icon: <FaTwitter />,
+    href: 'https://twitter.com/micurran_dev'
+  },
+  {
+    linkName: 'GitHub',
+    icon: <FaGithub />,
+    href: 'https://github.com/micurran_dev'
+  },
+  {
+    linkName: 'Personal Site',
+    icon: <FaUser />,
+    href: 'https://www.micurran.dev'
+  },
+  {
+    linkName: 'Blog',
+    icon: <FaPencilAlt />,
+    href: 'https://www.micurran.hashnode.dev'
+  },
+]
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <MotionHeading
-          initial={'hidden'}
-          animate={'visible'}
-          variants={animationVariants}
-          className={styles.title} 
-          color="brand.900">
-          <a href="https://nextjs.org">Next.js!</a>
-        </MotionHeading>
-
-        <Text className={styles.description}>
-          Boilerplate with Chakra UI - SASS
-        </Text>
-
-        <div className={styles.grid}>
-          <MotionLink
-            initial={'hidden'}
-            animate={'visible'}
-            variants={animationVariants}
-            href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </MotionLink>
-
-          <MotionLink
-            initial={'hidden'}
-            animate={'visibleExtraDelay'}
-            variants={animationVariants}
-            href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </MotionLink>
-
-          <MotionLink
-            initial={'hidden'}
-            animate={'visibleExtraDelay2'}
-            variants={animationVariants}
-
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </MotionLink>
-
-          <MotionLink
-            initial={'hidden'}
-            animate={'visibleExtraDelay3'}
-            variants={animationVariants}
-
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </MotionLink>
-        </div>
+      <Heading> My Links</Heading>
+        <Avatar size={'xl'} src={'https://avatars.githubusercontent.com/u/65498724?v=4'} name={'Michael Curran'}/>
+        {links.map((link, i) => (
+          <Link
+            key={`${link.linkName}${i}`} 
+            rel="noopener noreferrer"
+            target={'_blank'} 
+            href={link.href}
+            my={'2'}
+            >
+              <Button 
+                width={'250px'}
+                leftIcon={link.icon}
+              > {link.linkName} </Button>
+          </Link>
+        ))}
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+        <VStack>
+          <MotionLink 
+            href="/"
+          >
+            Link Ladder
+          </MotionLink>
+          <MotionLink
+            href="https://www.micurran.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Created By:{' '} MiCurran
+          </MotionLink>
+        </VStack>
       </footer>
     </div>
   )
