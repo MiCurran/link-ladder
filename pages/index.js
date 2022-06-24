@@ -4,8 +4,8 @@ import { CustomHead } from '../components/CustomHead';
 export default function HomePage(props) {
   return (
     <>
-        <CustomHead title="BolierPlate Home" />
+        <CustomHead title="Link Ladder" />
         <Home {...props} />
     </>
   )
-}
+}    
