@@ -17,8 +17,8 @@ export const CustomHead = ({title, description}) => {
         description: 'Open Graph Description',
         images: [
           {
-            url: 'https://www.example.ie/og-image-01.jpg',
-            width: 800,
+            url: 'https://via.placeholder.com/1200x630.png',
+            width: 1200,
             height: 600,
             alt: 'Og Image Alt test',
             type: 'image/jpeg',
@@ -30,7 +30,7 @@ export const CustomHead = ({title, description}) => {
             alt: 'Og Image Alt Second test',
             type: 'image/jpeg',
           },
-          { url: 'https://www.example.ie/og-image-03.jpg' },
+          { url: 'https://via.placeholder.com/1200x630.png' },
           { url: 'https://www.example.ie/og-image-04.jpg' },
         ],
         site_name: 'SiteName',
