@@ -1,7 +1,7 @@
 import Head from 'next/head'; 
 import { NextSeo } from 'next-seo';
 
-export const CustomHead = ({title, description}) => {
+export const CustomHead = ({title, description, user}) => {
     return (
       <>
           <Head>
@@ -13,31 +13,22 @@ export const CustomHead = ({title, description}) => {
       canonical="https://www.canonical.ie/"
       openGraph={{
         url: 'https://www.url.ie/a',
-        title: 'Open Graph Title',
-        description: 'Open Graph Description',
+        title: "user",
+        description: "Link Ladder - All of your content creation links in one customizable snd SEO friendly location",
         images: [
           {
-            url: 'https://via.placeholder.com/1200x630.png',
+            url: 'https://pbs.twimg.com/profile_banners/1538993801003270144/1655842042/1500x500',
             width: 1200,
             height: 600,
             alt: 'Og Image Alt test',
             type: 'image/jpeg',
           },
-          {
-            url: 'https://www.example.ie/og-image-02.jpg',
-            width: 900,
-            height: 800,
-            alt: 'Og Image Alt Second test',
-            type: 'image/jpeg',
-          },
-          { url: 'https://via.placeholder.com/1200x630.png' },
-          { url: 'https://www.example.ie/og-image-04.jpg' },
         ],
         site_name: 'SiteName',
       }}
       twitter={{
-        handle: '@handletest',
-        site: '@sitetest',
+        handle: '@micurran_dev',
+        site: '@link-ladder',
         cardType: 'summary_large_image',
       }}
     />
