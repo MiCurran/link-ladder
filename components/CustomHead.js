@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 
 export const CustomHead = ({title, description, user}) => {
+  const TITLE = `${user}'s Links`;
     return (
       <>
           <Head>
@@ -13,7 +14,7 @@ export const CustomHead = ({title, description, user}) => {
       canonical="https://www.canonical.ie/"
       openGraph={{
         url: 'https://www.url.ie/a',
-        title: "user",
+        title: TITLE,
         description: "Link Ladder - All of your content creation links in one customizable snd SEO friendly location",
         images: [
           {
