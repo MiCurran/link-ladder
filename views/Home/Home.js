@@ -6,11 +6,12 @@ import {FaGithub, FaPencilAlt, FaTwitter, FaUser} from 'react-icons/fa'
 const MotionHeading = motion(Heading);
 const MotionLink = motion(Link);
 import Hero from '../../components/Hero/Hero';
+import Nav from '../../components/Nav/Nav';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      
+    <div>
+      <Nav />
       <Hero />
       <footer className={styles.footer}>
         <VStack>

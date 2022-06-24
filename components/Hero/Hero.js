@@ -48,7 +48,7 @@ import {
             </Heading>
             <Text color={'gray.500'}>
               Link Ladder is a customizable space to display links to
-              all of your content creation channels. For free!
+              all of your content creation channels. SEO friendly {"&"} free!
             </Text>
             <Stack
               spacing={{ base: 4, sm: 6 }}

@@ -20,14 +20,14 @@ export const CustomHead = ({title, description}) => {
             url: 'https://www.example.ie/og-image-01.jpg',
             width: 800,
             height: 600,
-            alt: 'Og Image Alt',
+            alt: 'Og Image Alt test',
             type: 'image/jpeg',
           },
           {
             url: 'https://www.example.ie/og-image-02.jpg',
             width: 900,
             height: 800,
-            alt: 'Og Image Alt Second',
+            alt: 'Og Image Alt Second test',
             type: 'image/jpeg',
           },
           { url: 'https://www.example.ie/og-image-03.jpg' },
@@ -36,8 +36,8 @@ export const CustomHead = ({title, description}) => {
         site_name: 'SiteName',
       }}
       twitter={{
-        handle: '@handle',
-        site: '@site',
+        handle: '@handletest',
+        site: '@sitetest',
         cardType: 'summary_large_image',
       }}
     />
