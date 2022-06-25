@@ -1,5 +1,5 @@
 import {Heading, Text, Link, Avatar, Button, VStack } from '@chakra-ui/react'
-import styles from '../../styles/Home.module.scss'
+import styles from './Home.module.scss'
 import { motion } from 'framer-motion'
 import { animationVariants } from '../../constants/Animations/simpleVariants';
 import {FaGithub, FaPencilAlt, FaTwitter, FaUser} from 'react-icons/fa'
