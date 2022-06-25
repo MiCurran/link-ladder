@@ -11,6 +11,7 @@ export default function User({user}) {
         <>
             <CustomHead
                 title={`User Name ${user}`}
+                user={user}
                 description="Fully customizable SEO descriptions images and links"
             />
             <UserView user={user}/>
@@ -20,9 +21,11 @@ export default function User({user}) {
 
 export async function getServerSideProps(context) {
     let {user} = context.params
+
+    // eventually we will redirect if no user is found
     return {
         props: {
             user
-        }, // will be passed to the page component as props
+        },
     }
 }

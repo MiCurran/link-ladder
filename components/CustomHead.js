@@ -18,7 +18,7 @@ export const CustomHead = ({title, description, user}) => {
         description: "Link Ladder - All of your content creation links in one customizable snd SEO friendly location",
         images: [
           {
-            url: 'https://pbs.twimg.com/profile_banners/1538993801003270144/1655842042/1500x500',
+            url: 'https://link-ladder.vercel.app/OGimage.png',
             width: 1200,
             height: 600,
             alt: 'Og Image Alt test',
