@@ -1,6 +1,5 @@
 import {Heading, Text, Link, Avatar, Button, VStack } from '@chakra-ui/react'
 import styles from './UserView.module.scss'
-import { motion } from 'framer-motion'
 import {FaGithub, FaPencilAlt, FaTwitter, FaUser} from 'react-icons/fa'
 import Footer from '../../components/Footer/Footer'
 

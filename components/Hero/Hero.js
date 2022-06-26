@@ -15,7 +15,7 @@ import {
   
   export default function CallToActionWithVideo() {
     return (
-      <Container maxW={'7xl'}>
+      <Container h={'80vh'} maxW={'7xl'}>
         <Stack
           align={'center'}
           spacing={{ base: 8, md: 10 }}
@@ -36,13 +36,13 @@ import {
                   position: 'absolute',
                   bottom: 1,
                   left: 0,
-                  bg: 'red.400',
+                  bg: 'brand.200',
                   zIndex: -1,
                 }}>
                 All your links,
               </Text>
               <br />
-              <Text as={'span'} color={'red.400'}>
+              <Text as={'span'} color={'brand.500'}>
                 in one customizable space!
               </Text>
             </Heading>
@@ -59,8 +59,8 @@ import {
                 fontWeight={'normal'}
                 px={6}
                 colorScheme={'red'}
-                bg={'red.400'}
-                _hover={{ bg: 'red.500' }}>
+                bg={'brand.500'}
+                _hover={{ bg: 'brand.600' }}>
                 Get started
               </Button>
               <Button
@@ -114,7 +114,7 @@ import {
                 w={'100%'}
                 h={'100%'}
                 src={
-                  'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80'
+                    '/linkPage.png'
                 }
               />
             </Box>
@@ -143,7 +143,8 @@ import {
           fillRule="evenodd"
           clipRule="evenodd"
           d="M239.184 439.443c-55.13-5.419-110.241-21.365-151.074-58.767C42.307 338.722-7.478 282.729.938 221.217c8.433-61.644 78.896-91.048 126.871-130.712 34.337-28.388 70.198-51.348 112.004-66.78C282.34 8.024 325.382-3.369 370.518.904c54.019 5.115 112.774 10.886 150.881 49.482 39.916 40.427 49.421 100.753 53.385 157.402 4.13 59.015 11.255 128.44-30.444 170.44-41.383 41.683-111.6 19.106-169.213 30.663-46.68 9.364-88.56 35.21-135.943 30.551z"
-          fill="currentColor"
+          fill="#536f82"
+          fillOpacity={'20%'}
         />
       </Icon>
     );

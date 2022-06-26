@@ -81,12 +81,12 @@ import {
               fontSize={'sm'}
               fontWeight={600}
               color={'white'}
-              bg={'pink.400'}
+              bg={'secondary.500'}
               href={'#'}
               _hover={{
-                bg: 'pink.300',
+                bg: 'secondary.400',
               }}>
-              Sign Up
+              Sign Up!
             </Button>
           </Stack>
         </Flex>
@@ -246,7 +246,7 @@ import {
   const NAV_ITEMS = [
     {
       label: 'How it Works',
-      href: '/FAQ',
+      href: '#FAQ',
     },
     {
       label: 'Preview',
