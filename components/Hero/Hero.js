@@ -39,16 +39,16 @@ import {
                   bg: 'brand.200',
                   zIndex: -1,
                 }}>
-                All your links,
+                The Only Link
               </Text>
               <br />
               <Text as={'span'} color={'brand.500'}>
-                in one customizable space!
+                You{"'"}ll ever need!
               </Text>
             </Heading>
             <Text color={'gray.500'}>
-              Link Ladder is a customizable space to display links to
-              all of your content creation channels. SEO friendly {"&"} free!
+              Link Ladder is a customizable micro-landing page to display links to
+              all of your content creation channels. SEO friendly {"&"} you can sign up free!
             </Text>
             <Stack
               spacing={{ base: 4, sm: 6 }}

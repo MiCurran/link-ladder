@@ -37,7 +37,7 @@ import {
   
   export default function Features() {
     return (
-      <Container height={'100vh'} maxW={'5xl'} py={12}>
+      <Container maxW={'5xl'} py={12}>
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
           <Stack spacing={4}>
             <Text
@@ -51,7 +51,7 @@ import {
               rounded={'md'}>
               Make It Yours
             </Text>
-            <Heading>Fully Customizable & SEO Friendly</Heading>
+            <Heading>Fully Customizable Micro Landing Page</Heading>
             <Text color={'gray.500'} fontSize={'lg'}>
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod tempor invidunt ut labore
@@ -73,7 +73,7 @@ import {
               <Feature
                 icon={<Icon as={IoLogoBitcoin} color={'green.500'} w={5} h={5} />}
                 iconBg={useColorModeValue('green.100', 'green.900')}
-                text={'Own Your SEO'}
+                text={'Add Forms & Payments'}
               />
               <Feature
                 icon={

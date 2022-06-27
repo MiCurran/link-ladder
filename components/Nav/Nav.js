@@ -77,17 +77,18 @@ import {
               Sign In
             </Button>
             <Button
-              display={{ base: 'none', md: 'inline-flex' }}
-              fontSize={'sm'}
-              fontWeight={600}
-              color={'white'}
-              bg={'secondary.500'}
-              href={'#'}
-              _hover={{
-                bg: 'secondary.400',
-              }}>
-              Sign Up!
-            </Button>
+            as={'a'}
+          display={{ base: 'none', md: 'inline-flex' }}
+          fontSize={'sm'}
+          fontWeight={600}
+          color={'white'}
+          bg={'brand.700'}
+          href={'/auth/signin'}
+          _hover={{
+            bg: 'pink.300',
+          }}>
+          Sign Up
+        </Button>
           </Stack>
         </Flex>
   

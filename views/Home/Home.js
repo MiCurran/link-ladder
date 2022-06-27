@@ -8,6 +8,7 @@ const MotionLink = motion(Link);
 import Hero from '../../components/Hero/Hero';
 import Nav from '../../components/Nav/Nav';
 import Features from '../../components/Features/Features';
+import Footer from '../../components/Footer/Footer';
 
 export default function Home() {
   return (
@@ -39,29 +40,14 @@ export default function Home() {
       </Center>
       <Features />
       <BlobDivider />
-      <Center bgGradient={'linear(to-tr, blue.800, blue.600)'}>
+      <Center bgGradient={'linear(to-tr, blue.800, blue.600)'} flexDir={'column'}>
       <Image 
         src={'/linkPage.png'}
         height={'auto'}
         width={'auto'}
       />
       </Center>
-      <footer className={styles.footer}>
-        <VStack>
-          <MotionLink 
-            href="/"
-          >
-            Link Ladder
-          </MotionLink>
-          <MotionLink
-            href="https://www.micurran.dev"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Created By:{' '} MiCurran
-          </MotionLink>
-        </VStack>
-      </footer>
+      <Footer />
     </div>
   )
 }
