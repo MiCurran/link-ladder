@@ -276,4 +276,8 @@ export default function Nav() {
       label: 'Preview',
       href: '/me/micurran',
     },
+    {
+        label: 'Pricing',
+        href: '#Pricing'
+    },
   ];

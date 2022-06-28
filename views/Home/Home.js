@@ -38,7 +38,7 @@ export default function Home() {
               <br />
             </Heading>
       </Center>
-      <Features />
+      <Features/>
       <BlobDivider />
       <Center bgGradient={'linear(to-tr, blue.800, blue.600)'} flexDir={'column'}>
       <Image 
