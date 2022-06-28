@@ -14,29 +14,31 @@ import {
     useColorModeValue,
     useBreakpointValue,
     useDisclosure,
-  } from '@chakra-ui/react';
-  import {
+} from '@chakra-ui/react';
+import {
     HamburgerIcon,
     CloseIcon,
     ChevronDownIcon,
     ChevronRightIcon,
-  } from '@chakra-ui/icons';
-  
-  export default function Nav() {
+} from '@chakra-ui/icons';
+import { useSession, signIn, signOut } from "next-auth/react"
+
+export default function Nav() {
+    const { data: session } = useSession()
     const { isOpen, onToggle } = useDisclosure();
-  
+
     return (
-      <Box>
-        <Flex
-          bg={useColorModeValue('white', 'gray.800')}
-          color={useColorModeValue('gray.600', 'white')}
-          minH={'60px'}
-          py={{ base: 2 }}
-          px={{ base: 4 }}
-          borderBottom={1}
-          borderStyle={'solid'}
-          borderColor={useColorModeValue('gray.200', 'gray.900')}
-          align={'center'}>
+        <Box>
+            <Flex
+                bg={useColorModeValue('white', 'gray.800')}
+                color={useColorModeValue('gray.600', 'white')}
+                minH={'60px'}
+                py={{ base: 2 }}
+                px={{ base: 4 }}
+                borderBottom={1}
+                borderStyle={'solid'}
+                borderColor={useColorModeValue('gray.200', 'gray.900')}
+                align={'center'}>
           <Flex
             flex={{ base: 1, md: 'auto' }}
             ml={{ base: -2 }}
@@ -62,34 +64,55 @@ import {
               <DesktopNav />
             </Flex>
           </Flex>
-  
-          <Stack
-            flex={{ base: 1, md: 0 }}
-            justify={'flex-end'}
-            direction={'row'}
-            spacing={6}>
-            <Button
-              as={'a'}
+              {!session
+                ? (
+                <Stack
+                flex={{ base: 1, md: 0 }}
+                justify={'flex-end'}
+                direction={'row'}
+                spacing={6}>
+                <Button
+                  as={'a'}
+                  fontSize={'sm'}
+                  fontWeight={400}
+                  variant={'link'}
+                  href={'/auth/signin'}
+                  >
+                  Sign In
+                </Button>
+                <Button
+                as={'a'}
+              display={{ base: 'none', md: 'inline-flex' }}
               fontSize={'sm'}
-              fontWeight={400}
-              variant={'link'}
-              href={'#'}>
-              Sign In
+              fontWeight={600}
+              color={'white'}
+              bg={'brand.700'}
+              href={'/auth/signin'}
+              _hover={{
+                bg: 'pink.300',
+              }}>
+              Sign Up
             </Button>
-            <Button
-            as={'a'}
-          display={{ base: 'none', md: 'inline-flex' }}
-          fontSize={'sm'}
-          fontWeight={600}
-          color={'white'}
-          bg={'brand.700'}
-          href={'/auth/signin'}
-          _hover={{
-            bg: 'pink.300',
-          }}>
-          Sign Up
-        </Button>
-          </Stack>
+              </Stack>
+                )
+                : (
+                    <Stack
+                flex={{ base: 1, md: 0 }}
+                justify={'flex-end'}
+                direction={'row'}
+                spacing={6}>
+                <Button
+                    onClick={signOut}
+                  as={'a'}
+                  fontSize={'sm'}
+                  fontWeight={400}
+                  variant={'link'}
+                  href={'#'}>
+                  Sign Out
+                </Button>
+            </Stack>
+                )
+              }
         </Flex>
   
         <Collapse in={isOpen} animateOpacity>

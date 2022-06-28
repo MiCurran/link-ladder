@@ -53,7 +53,7 @@ export default NextAuth({
   callbacks: {
     async redirect({ url, baseUrl }) {
       // Allows relative callback URLs
-      return '/'
+      return '/auth/onboarding/new-user'
     },
     async jwt({ token }) {
       token.userRole = "admin"
